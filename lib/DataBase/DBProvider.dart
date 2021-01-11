@@ -108,10 +108,11 @@ class VariableSetDB  extends BaseDB {
   VariableSetDB():super(
       tableName:"VariableSet",
       initSQL: "CREATE TABLE IF NOT EXISTS VariableSet("
-          "draftId  INTEGER  KEY ,"
+          "draftId INTEGER KEY,"
           "variableName TEXT,"
           "variableValue TEXT,"
-          "orderNum INTEGER"
+          "orderNum INTEGER,"
+          "PRIMARY KEY (draftId,variableName)"
           ")"
 
 
